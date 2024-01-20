@@ -23,8 +23,62 @@ body{
 
 .right-side{
     display: flex;
+    align-items: center;
 }
 
 .dark-theme-container{
     display: flex;
+    width: 80px;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+.font-family{
+    margin-right: 18px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.stick-container{
+    margin: 0px 26px;
+}
+
+.toggle{
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+.toggle-input{
+    display: none;
+}
+.toggle-fill{
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    background: #757575;
+}
+
+.toggle-fill::after{
+    content: "";
+    position: absolute;
+    top: 3.4px;
+    left: 4px;
+    height: 14px;
+    width: 14px;
+    background: #ffff;
+    box-shadow: 0 0 10px rgba(0,0,0.25);
+    border-radius: 50%;
+    transition: transform .5s;
+}
+
+.toggle-input:checked ~ .toggle-fill::after{
+    transform: translateX(19px);
+}
+
+.fa-moon{
+    transform: rotate(-25deg);
 }
