@@ -87,6 +87,7 @@ body{
 
 .fa-moon{
     transform: rotate(-25deg);
+    font-size: 20px;
 }
 
 /* Search Bolumu */
@@ -121,4 +122,142 @@ body{
     top: 50%;
     right: 25px;
     transform: translateY(-50%);
+}
+
+/* Arama Sonucu Bolumu */
+
+.search-result-container{
+    margin-top: 45px;
+}
+
+.search-result{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-text{
+    color: #2D2D2D;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.result-pronunciation{
+    margin-top: 8px;
+    color: #A445ED;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 24px;
+}
+
+.voiceover{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.word-type{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.word-type-text{
+    color:#2D2D2D;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.line{
+    height: 1px;
+    background: #E9E9E9;
+    width: 100%;
+}
+
+.meaning-container{
+    margin-top: 40px;
+}
+
+.meaning-container h3 {
+    color: #757575;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.meaning-description-list{
+    margin-top: 25px;
+    padding-left: 44px;
+}
+
+.description-element{
+    padding: 9px;
+    color: #2D2D2D;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.description-element::marker{
+    color: #8F19E8;
+}
+
+.synonim-container{
+    margin-top: 40px;
+}
+
+.synonyms-title {
+    color:#757575;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.synonyms-content{
+    color:#A445ED;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.example{
+    margin-left: 47px;
+    color:#757575;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.last-line{
+    margin-top: 40px;
+}
+
+.source-container{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.source-title{
+    color: #757575;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 14px;
+    text-decoration-line: underline;
+    margin-right: 20px;
+}
+
+.source-link-container{
+    display: flex;
+    align-items: center;
+}
+
+.source-link{
+    color:#2D2D2D;
+    font-size: 14px;
+    text-decoration-line: underline;
+    margin-right: 9px;
 }
