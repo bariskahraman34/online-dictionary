@@ -1,0 +1,5 @@
+@media(width <= 600px){
+    .container{
+        width: 468px;
+    }
+}
