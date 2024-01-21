@@ -9,6 +9,7 @@
 body{
     font-family: 'Inter', sans-serif;
     margin-top: 58px;
+    margin-bottom: 58px;
 }
 
 .container{
@@ -66,6 +67,7 @@ body{
     height: 20px;
     border-radius: 20px;
     background: #757575;
+    transition: background .25s ease;
 }
 
 .toggle-fill::after{
@@ -154,6 +156,10 @@ body{
     cursor: pointer;
     background-color: transparent;
     border: none;
+    background-image: url('../icons/voice-icon.svg');
+    width: 75px;
+    height: 75px;
+    transition: background-image .15s ease;
 }
 
 .word-type{
@@ -261,3 +267,61 @@ body{
     text-decoration-line: underline;
     margin-right: 9px;
 }
+
+/* Hover Effects */
+
+.voiceover:hover{
+    background-image: url('../icons/voice-icon-hover.svg');
+}
+
+.toggle-fill:hover{
+    background: #A445ED;
+}
+
+.synonyms-content:hover{
+    text-decoration: underline;
+}
+
+.search-input:hover{
+    cursor: pointer;
+}
+
+.font-selector-container{
+    position: relative;
+}
+
+.font-family-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    opacity: 0;
+    position: absolute;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.10);
+    padding: 24px;
+    z-index: -1;
+    width: 183px;
+    height: 152px;
+    top: 38px;
+    left: -55px;
+    transition: all 1s ease;
+}
+
+.font-selector-container:hover .font-family-container , .font-family-container:hover{
+    z-index: 999;
+    opacity: 1;
+}
+
+.font-type{
+    color:#2D2D2D;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    transition: color .3s ease;
+}
+
+.font-type:hover{
+    color: #A445ED;
+}
+
