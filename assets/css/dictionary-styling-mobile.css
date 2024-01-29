@@ -1,5 +1,72 @@
 @media(width <= 600px){
+    body{
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
     .container{
-        width: 468px;
+        width: 375px;
+    }
+    .stick-container{
+        margin: 0 16px;
+    }
+    .search-result-container{
+        margin-top: 24px;
+    }
+    .search-container{
+        margin-top: 24px;
+    }
+    .search-container input{
+        font-size: 16px;
+    }
+    .word-type{
+        margin-top: 24px;
+    }
+    .result-text{
+        font-size: 32px;
+    }
+    .result-pronunciation{
+        font-size: 18px;
+    }
+    .voiceover{
+        width: 48px;
+        height: 48px;
+        background-size: contain;
+    }
+    .meaning-container{
+        margin-top: 32px;
+    }
+    .word-type-text{
+        font-size: 18px;
+    }
+    .meaning-container h3{
+        font-size: 16px;
+    }
+    .description-element{
+        font-size: 15px;
+    }
+    .meaning-description-list{
+        padding-left: 25px;
+        margin-top: 17px;
+    }
+    .synonim-container{
+        margin-top: 24px;
+    }
+    .word-type{
+        margin-top: 33px;
+    }
+    .synonyms-title{
+        font-size: 16px;
+    }
+    .synonyms-content{
+        font-size: 16px;
+    }
+    .example{
+        font-size: 15px;
+    }
+    .last-line{
+        margin-top: 32px;
+    }
+    .source-container{
+        margin-top: 24px;
     }
 }
