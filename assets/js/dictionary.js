@@ -37,7 +37,7 @@ function displayResult(data){
                 ${data.phonetic ? `<span class="result-pronunciation">${data.phonetic}</span>` : ""}
                 
             </div>
-            ${data.phonetics[0].audio != "" ? `
+            ${data.phonetics[0] && data.phonetics[0].audio && data.phonetics[0].audio !== "" ? `
             <div class="voiceover" onclick="playAudio()">
                 <audio id="audio">
                     <source src=${data.phonetics[0].audio} type="audio/mp3">
@@ -56,11 +56,11 @@ function displayResult(data){
         </div>
         ${data.meanings[0].synonyms.length != 0 ? `<div class="synonim-container">
         <span class="synonyms-title">Synonyms</span>
-        ${data.meanings[0].synonyms.map(synonym => `<span class="synonyms-content">${synonym}</span>`)}
+        ${data.meanings[0].synonyms.map(synonym => `<a href="#" class="synonyms-content">${synonym}</a>`)}
         </div>` : ""}
         ${data.meanings[0].antonyms.length != 0 ? `<div class="synonim-container">
         <span class="synonyms-title">Anthonyms</span>
-        ${data.meanings[0].antonyms.map(antonym => `<span class="synonyms-content">${antonym}</span>`)}
+        ${data.meanings[0].antonyms.map(antonym => `<a href="#" class="synonyms-content">${antonym}</a>`)}
         </div>` : ""}
         ${data.meanings[1] && data.meanings[1].partOfSpeech ? 
         `<div class="word-type">
@@ -84,5 +84,35 @@ function displayResult(data){
                 <img src="assets/icons/source-link.svg" alt="">
             </div>
         </div>
-    `
+    `;
+    const similarWordsBtns = document.querySelectorAll('.synonyms-content');
+
+    for (const similarBtn of similarWordsBtns) {
+        similarBtn.addEventListener('click', e => displayClickedResult(e))
+    }
+}
+
+
+
+function displayClickedResult(e){
+    e.preventDefault();
+    console.log(e.target.innerHTML)
+    const searchInput = document.querySelector('#search');
+    searchInput.value = e.target.innerHTML;
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${e.target.innerHTML}`)
+    .then(res => res.json())
+    .then(data => {
+        if(data.title){
+            return searchResultContainer.innerHTML = 
+            `
+            <div class="no-found-icon">
+            😕
+            </div>
+            <div class="no-found">${data.title}</div>
+            <div class="message">${data.message + data.resolution}</div>
+            `;
+        }
+        console.log(data[0])
+        displayResult(data[0])
+    })
 }
