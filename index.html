@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/dictionary-styling.css">
+    <link rel="stylesheet" href="assets/css/dictionary-styling-mobile.css">
+    <title>Dictionary Web App</title>
+</head>
+<body>
+    <!-- Header Bolumu -->
+    <header class="top-bar container">
+        <div class="left-side">
+            <img src="assets/icons/iconoir_book.svg" alt="">
+        </div>
+        <div class="right-side">
+            <div class="font-selector-container">
+                <span class="font-family">
+                    Sans Serif
+                </span>
+                <img src="assets/icons/arrow-down.svg" alt="">
+                <div class="font-family-container">
+                    <span class="font-type">Sans Serif</span>
+                    <span class="font-type">Sans</span>
+                    <span class="font-type">Mono</span>
+                </div>
+            </div>
+            <div class="stick-container">
+                <img src="assets/icons/stick.svg" alt="">
+            </div>
+            <div class="dark-theme-container">
+                <label class="toggle" for="dark-theme-selector">
+                    <input class="toggle-input" type="checkbox" id="dark-theme-selector">
+                    <div class="toggle-fill">
+                    </div>
+                </label>
+                <i class="fa-solid fa-moon"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Search Bolumu -->
+    <section class="search-container container">
+        <form id="search-form">
+            <input id="search" class="search-input" name="word" type="text" placeholder="Search for any word...">
+            <button type="submit" class="search-btn">
+                <img src="assets/icons/search-icon.svg" alt="">
+            </button>
+        </form>
+    </section>
+    <!-- Arama Sonucu Bolumu -->
+    <section class="search-result-container container">
+        <div class="search-result">
+            <div class="search-result-text-container">
+                <h2 class="result-text">keyboard</h2>
+                <span class="result-pronunciation">/ˈkiːbɔːd/</span>
+            </div>
+        </div>
+        <div class="word-type">
+            <span id="noun" class="word-type-text">noun</span>
+            <div class="line"></div>
+        </div>
+        <div class="meaning-container">
+            <h3>Meaning</h3>
+            <ul class="meaning-description-list">
+                <li class="description-element">(etc.) A set of keys used to operate a typewriter, computer etc.</li>
+                <li class="description-element">A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</li>
+                <li class="description-element">A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.</li>
+            </ul>
+        </div>
+        <div class="synonim-container">
+            <span class="synonyms-title">Synonyms</span>
+            <a href="#" class="synonyms-content">electronic keyboard</a>
+        </div>
+        <div class="word-type">
+            <span class="word-type-text">verb</span>
+            <div class="line"></div>
+        </div>
+        <div class="meaning-container">
+            <h3>Meaning</h3>
+            <ul class="meaning-description-list">
+                <li class="description-element">To type on a computer keyboard.</li>
+            </ul>
+            <span class="example">“Keyboarding is the part of this job I hate the most.”</span>
+        </div>
+        <div class="line last-line"></div>
+        <div class="source-container">
+            <span class="source-title">Source</span>
+            <div class="source-link-container">
+                <a class="source-link" target="_blank" href="https://en.wiktionary.org/wiki/keyboard">https://en.wiktionary.org/wiki/keyboard</a>
+                <img src="assets/icons/source-link.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/dictionary.js"></script>
+    <script>
+        function playAudio(){
+            const audio = document.querySelector('#audio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
