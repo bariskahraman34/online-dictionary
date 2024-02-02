@@ -119,11 +119,15 @@ body{
     border: 1px solid #A445ED ;
 }
 
-.search-icon{
+.search-btn{
     position: absolute;
     top: 50%;
-    right: 25px;
+    padding: 25px;
+    right: 0px;
     transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
 }
 
 /* Arama Sonucu Bolumu */
@@ -282,10 +286,6 @@ body{
     text-decoration: underline;
 }
 
-.search-input:hover{
-    cursor: pointer;
-}
-
 .font-selector-container{
     position: relative;
 }
@@ -326,3 +326,22 @@ body{
     color: #A445ED;
 }
 
+/* No Definition Found */
+
+.no-found{
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.message{
+    opacity: .5;
+    text-align: center;
+}
+
+.no-found-icon{
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 30px;
+}

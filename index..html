@@ -42,10 +42,12 @@
     </header>
     <!-- Search Bolumu -->
     <section class="search-container container">
-        <input class="search-input" type="text" placeholder="Search for any word...">
-        <span class="search-icon">
-            <img src="assets/icons/search-icon.svg" alt="">
-        </span>
+        <form id="search-form">
+            <input id="search" class="search-input" name="word" type="text" placeholder="Search for any word...">
+            <button type="submit" class="search-btn">
+                <img src="assets/icons/search-icon.svg" alt="">
+            </button>
+        </form>
     </section>
     <!-- Arama Sonucu Bolumu -->
     <section class="search-result-container container">
@@ -54,11 +56,9 @@
                 <h2 class="result-text">keyboard</h2>
                 <span class="result-pronunciation">/ˈkiːbɔːd/</span>
             </div>
-            <button class="voiceover">
-            </button>
         </div>
         <div class="word-type">
-            <span class="word-type-text">noun</span>
+            <span id="noun" class="word-type-text">noun</span>
             <div class="line"></div>
         </div>
         <div class="meaning-container">
@@ -95,5 +95,11 @@
     </section>
 
     <script src="assets/js/dictionary.js"></script>
+    <script>
+        function playAudio(){
+            const audio = document.querySelector('#audio');
+            audio.play();
+        }
+    </script>
 </body>
 </html>
